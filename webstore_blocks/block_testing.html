@@ -11,29 +11,117 @@
 
 <!-- Block for the front page, showing interesting products for buyer -->
     <style type="text/css" media="screen">
+        body
+        {
+          margin: 0;
+          padding: 0;
+        }
 
-    </style>
+        .frontpage_product_container
+        {
+          min-height: 800px;
+          overflow: auto;
+          position: relative;
+          font-family: "Arial, Helvetica", sans-serif;
+        }
+        .frontpage_product_container h1, .frontpage_product_container h2, .frontpage_product_container h3,
+        .frontpage_product_container h4, .frontpage_product_container h5
+        {
+          margin: 0;
+          padding: 0;
+        }
+        .frontpage_product_container img
+        {
+          max-width: 100%;
+        }
+        .frontpage_product_div
+        {
+          width: 320px;
+          height: 30%;
+          max-height: 700px;
+          min-height: 400px;
+          background: linear-gradient(to right, #999, #ccc, #999);
+          border-radius: 5px;
+          padding: 0;
+          margin: 10px;
+          text-align: center;
+          box-sizing: border-box;
+          float: left;
+          position: relative;
+        }
+        p
+        {
+          margin: 0;
+          padding: 0;
+        }
+        .frontpage_product_div_content1
+        {
+          width: 100%;
+          min-height: 230px;
+          height: 80%;
+          padding: 5px;
+          box-sizing: border-box;
+          position: absolute;
+        }
+        .frontpage_product_div_content2
+        {
+          width: 100%;
+          height: 20%;
+          min-height: 50px;
+          padding: 5px;
+          box-sizing: border-box;
+          position: absolute;
+          bottom: 0;
+        }
+        .borders
+        {
+          box-sizing: border-box;
+          height: 100%;
+          width: 100%;
+          border-radius: 5px;
+          border: 1px solid #000;
+        }
+        .product_description
+        {
+          float: left;
+          height: 100%;
+          width: 75%;
+          box-sizing: border-box;
+          padding: 5px;
+        }
+        .prize
+        {
+          float: right;
+          height: 100%;
+          width: 25%;
+          box-sizing: border-box;
+          padding: 10px 5px 5px 5px;
+          font-size: 1.2rem;
+        }
+        </style>
     <div class="frontpage_product_container">
 
-    <div class="frontpage_product_div" content="content_0">
+    <div class="frontpage_product_div"
 
-      <div class="frontpage_product_div_content1">
-        <div class="borders">
-        <h3>Random content</h3>
-        <img src="cube.jpg" alt="Cube">
+    content="content_0">
+<!-- Change the content value from above depending of the amount of your products
+      using the value from content change the display of class content_0....n -->
+
+      <div class="frontpage_product_div_content1 content_0">
+        <div class="borders content_0" style="background:url('cube.jpg'); background-size:cover;">
+        <h3 class="content_0">Tuotteen nimi</h3>
         </div>
       </div>
 
-      <div class="frontpage_product_div_content2">
+      <div class="frontpage_product_div_content2 content_0">
         <div class="borders">
         <div class="product_description">
-          <h4>Lyhyt kuvaus tuotteesta</h4>
-          <p>Toinen kuvaus</p>
-          <p>Lisää kuvausta.</p>
+          <h4 class="content_0">Lyhyt kuvaus tuotteesta</h4>
+          <a href="javascript:void(0)" class="content_0">Katso tuote</a>
         </div>
 
-        <p class="prize">20000€
-        <a href="javascript:void(0);" style="font-size:1.0rem; text-decoration:none; color:#fff;">Kassa</a>
+        <p class="prize content_0">20000€
+        <a class="content_0" href="javascript:void(0);" style="font-size:1.0rem; text-decoration:none; color:#fff; background:linear-gradient(to bottom, #6bcc3f,#7cdd4f,#6bcc3f); padding:5px; border-radius:5px;">Kassa</a>
         </p>
 
         </div>
