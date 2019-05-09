@@ -11,11 +11,7 @@
 
 <!-- Block for the front page, showing interesting products for buyer -->
     <style type="text/css" media="screen">
-        body
-        {
-          margin: 0;
-          padding: 0;
-        }
+
 
         .frontpage_product_container
         {
@@ -99,6 +95,14 @@
           font-size: 1.2rem;
         }
         </style>
+        <script>
+
+        var loc = window.location.pathname;
+        var dir = loc.substring(0, loc.lastIndexOf('/'));
+        console.log(dir);
+
+        </script>
+
     <div class="frontpage_product_container">
 
     <div class="frontpage_product_div"
