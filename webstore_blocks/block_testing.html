@@ -5,12 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="test.css">
     <title>Testing page</title>
+
+    <script src="jquery.js"></script>
+
+    <script type="text/javascript">
+
+    $(document).ready(function()
+    {
+      // FOR MOBILE SO YOU CAN CLICK
+      $('.dropselection').on('click', function()
+      {
+        var selection = $(this).attr('dropselection');
+        $('.drop_hide').not('.' + selection).css('display', 'none');
+        selection = '.' + selection;
+        $(selection).css('display', 'block');
+      });
+
+      // ON DESKTOP SO YOU CAN HOVER
+      $('.dropselection').hover(function()
+      {
+        var background = $('.dropselection').not(this).parent();
+        $(background).css("background-color", 'rgba(0,0,0,0)');
+        $(this).parent().css("background-color", 'rgba(200,200,200,0.5)');
+        var selection = $(this).attr('dropselection');
+        $('.drop_hide').not('.' + selection).css('display', 'none');
+        selection = '.' + selection;
+        $(selection).css('display', 'block');
+      });
+    });
+
+    </script>
+
   </head>
   <body>
     <!-- This is a basic HTML-site for testing drupal buildingblocks -->
 
 <!-- Block for the front page, showing interesting products for buyer -->
-    <style type="text/css" media="screen">
+<!--    <style type="text/css" media="screen">
 
 
         .frontpage_product_container
@@ -94,24 +125,24 @@
           padding: 10px 5px 5px 5px;
           font-size: 1.2rem;
         }
-        </style>
-        <script>
+      </style> -->
+    <!--    <script>
 
         var loc = window.location.pathname;
         var dir = loc.substring(0, loc.lastIndexOf('/'));
         console.log(dir);
 
-        </script>
+      </script> -->
 
-    <div class="frontpage_product_container">
+  <!--  <div class="frontpage_product_container">
 
     <div class="frontpage_product_div"
 
-    content="content_0">
+    content="content_0"> -->
 <!-- Change the content value from above depending of the amount of your products
       using the value from content change the display of class content_0....n -->
 
-      <div class="frontpage_product_div_content1 content_0">
+  <!--    <div class="frontpage_product_div_content1 content_0">
         <div class="borders content_0" style="background:url('cube.jpg'); background-size:cover;">
         <h3 class="content_0">Tuotteen nimi</h3>
         </div>
@@ -133,8 +164,46 @@
 
     </div>
 
-    </div>
+  </div> -->
 <!-- End of frontpage_product_container -->
+
+<!-- store menu -->
+
+
+
+<div class="store_dropdown">
+  <ul class="store_dropdown_list">
+    <li><a href="javascript:void(0);" dropselection="drop_shirts" class="dropselection">Shirts</a>
+      <ul class="drop_hide drop_shirts">
+      <li><a href="#">T-shirt</a></li>
+      <li><a href="#">Hoodie</a></li>
+      </ul>
+    </li>
+    <li><a href="#" dropselection="drop_hats" class="dropselection">Hats</a>
+      <ul class="drop_hide drop_hats">
+      <li><a href="#">Top hat</a></li>
+      <li><a href="#">Cap</a></li>
+      <li><a href="#">Fedora</a></li>
+      </ul>
+    </li>
+    <li><a href="#" dropselection="drop_pants" class="dropselection">Pants</a>
+      <ul class="drop_hide drop_pants">
+      <li><a href="#">Jeans</a></li>
+      <li><a href="#">Sweatpants</a></li>
+      </ul>
+    </li>
+    <li><a href="#" dropselection="drop_shoes" class="dropselection">Shoes</a>
+      <ul class="drop_hide drop_shoes">
+      <li><a href="#">Boots</a></li>
+      <li><a href="#">Air jordans</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+
+
+<!-- store menu ends -->
 
 
 
