@@ -27,5 +27,5 @@ const line1B = line1[0].y - (line1M * line1[0].x);
 const line2B = line2[0].y - (line2M * line2[0].x);
 
 const x = (line2B - line1B) / (line1M - line2M);
-const y = line1M * x;
+const y = line1M * x + line1B;
 console.log({ x, y });
