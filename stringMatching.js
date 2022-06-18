@@ -162,4 +162,4 @@ const strArr = ["a", "b", "c", "aaa", "d", "e", "aa"];
 const objArr = ["a", "b", "c", { key: "aaa" }, "d", { key: "e", obj: { key: "aaaa" } }, "aa"];
 
 console.log(matchStringToArrValues(strArr, "a"));
-console.log(matchStringToObjArrValues(strArr, "a", true));
+console.log(matchStringToObjArrValues(objArr, "a", true));
